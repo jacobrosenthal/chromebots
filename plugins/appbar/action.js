@@ -9,6 +9,9 @@ class ActionBar extends React.Component {
       devices: [],
       device: null
     };
+
+    this.saveDevice = this.saveDevice.bind(this);
+    this.refreshDevices = this.refreshDevices.bind(this);
   }
 
   loadDevices(){
@@ -47,11 +50,11 @@ class ActionBar extends React.Component {
         <Select
           value = {this.state.device}
           options = {this.state.devices}
-          onChange = {this.saveDevice.bind(this)} />
+          onChange = {this.saveDevice} />
         <input
           type = 'button'
           value = 'refresh'
-          onClick = {this.refreshDevices.bind(this)}/>
+          onClick = {this.refreshDevices}/>
         <button>install</button>
         <button>play</button>
       </div>);
