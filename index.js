@@ -13,6 +13,9 @@ function onRegister(err){
 const plugins = [
   {
     register: require('holovisor')
+  },
+  {
+    register: require('./plugins/appbar')
   }
 ];
 
